@@ -1,0 +1,102 @@
+tac = nil
+TriggerEvent('tac:getSharedObject', function(obj) tac = obj end)
+
+-- Update Checker
+local CurrentVersion = '3.0'
+
+PerformHttpRequest('https://raw.githubusercontent.com/clementinise/tac_repairkit/master/version', function(Error, NewestVersion, Header)
+		print('\n')
+		print('########################')
+		print('## RepairKit Resource')
+		print('##')
+		print('## Current Version: ' .. CurrentVersion)
+		print('## Newest Version: ' .. NewestVersion)
+		print('##')
+		if CurrentVersion ~= NewestVersion then
+			print('## Outdated')
+			print('## Please check the GitHub and download the last update')
+			print('## https://github.com/clementinise/tac_repairkit/releases/latest')
+			print('########################')
+		else
+			print('## Up to date!')
+			print('########################')
+		end
+		print('\n')
+end)
+
+-- Make the kit usable!
+tac.RegisterUsableItem('repairkit', function(source)
+	local _source = source
+	local xPlayer = tac.GetPlayerFromId(_source)
+	
+	if Config.AllowMecano then
+		TriggerClientEvent('tac_repairkit:onUse', _source)
+	else
+		if xPlayer.job.name ~= 'mecano' then
+			TriggerClientEvent('tac_repairkit:onUse', _source)
+		end
+	end
+end)
+
+tac.RegisterUsableItem('tyrekit', function(source)
+	local _source = source
+	local xPlayer = tac.GetPlayerFromId(_source)
+	
+	if Config.AllowMecano then
+		TriggerClientEvent('tyrekit:onUse', _source)
+	else
+		if xPlayer.job.name ~= 'mecano' then
+			TriggerClientEvent('tyrekit:onUse', _source)
+		end
+	end
+end)
+
+RegisterNetEvent('tac_repairkit:removeTyreKit')
+AddEventHandler('tac_repairkit:removeTyreKit', function()
+	local _source = source
+	local xPlayer = tac.GetPlayerFromId(_source)
+
+	if not Config.InfiniteRepairsTyreKit then
+		xPlayer.removeInventoryItem('tyrekit', 1)
+		TriggerClientEvent(_U('used_tyrekit'))
+	end
+end)
+
+RegisterNetEvent('tac_repairkit:removeKit')
+AddEventHandler('tac_repairkit:removeKit', function()
+	local _source = source
+	local xPlayer = tac.GetPlayerFromId(_source)
+
+	if not Config.InfiniteRepairs then
+		xPlayer.removeInventoryItem('repairkit', 1)
+		TriggerClientEvent(_U('used_kit'))
+	end
+end)
+
+function MecanoOnline()
+
+	local xPlayers = tac.GetPlayers()
+
+	MechanicConnected = 0
+
+	for i=1, #xPlayers, 1 do
+		local xPlayer = tac.GetPlayerFromId(xPlayers[i])
+		if xPlayer.job.name == 'mecano' then
+			MechanicConnected = MechanicConnected + 1
+		end
+	end
+
+	SetTimeout(10000, MecanoOnline)
+
+end
+
+MecanoOnline()
+
+RegisterServerEvent('jobonline:get')
+AddEventHandler('jobonline:get', function()
+	local counted = {}
+
+	counted['mecano'] = MechanicConnected
+
+	TriggerClientEvent('jobonline:set', source, counted)
+end)

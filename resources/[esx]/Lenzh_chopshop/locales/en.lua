@@ -1,0 +1,17 @@
+Locales['en'] = {
+  ['press_to_chop'] = "Presiona ~INPUT_CONTEXT~ para cortar el vehiculo",
+  ['map_blip'] = "Desarmadero",
+  ['map_blip_shop'] = "Desarmadero",
+  ['no_vehicle'] = "Debes estar en un vehiculo para desarmarlo.",
+  ['open_shop'] = "Presiona ~INPUT_CONTEXT~ para acceder a la  ~y~tienda~s~.",
+  ['sold'] = "Vendiste ~b~%sx~s~ ~y~%s~s~ por ~g~$%s~s~",
+  ['not_enough'] = 'No tienes suficiente de eso para vender!',
+  ['shop_prompt'] = 'presiona ~INPUT_CONTEXT~ para hablar con ~r~Jorge~s~.',
+  ['item'] = '$%s',
+  ['shop_title'] = 'Tienda de partes',
+  ['cooldown'] = '~s~Tienes que ~g~esperar ~r~%s segundos ~s~antes de ~g~desarmar ~s~otro vehiculo.',
+  ['call'] = 'Alguien esta desarmando un vehiculo.',
+  ['911'] = 'LLmando al 911',
+  ['chop'] = 'Cortar auto',
+  ['not_enough_cops'] = 'No hay suficientes policias en servicio',
+}

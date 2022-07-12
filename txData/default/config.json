@@ -1,0 +1,33 @@
+{
+  "global": {
+    "verbose": false,
+    "publicIP": "change-me",
+    "serverName": "change-me",
+    "language": "en",
+    "forceFXServerPort": null
+  },
+  "logger": {},
+  "monitor": {
+    "timeout": 1000,
+    "restarter": {
+      "failures": 15,
+      "schedule": []
+    }
+  },
+  "authenticator": {},
+  "webServer": {},
+  "discordBot": {
+    "enabled": false,
+    "token": null,
+    "announceChannel": null,
+    "statusCommand": "/status"
+  },
+  "fxRunner": {
+    "basePath": null,
+    "cfgPath": null,
+    "setPriority": false,
+    "onesync": false,
+    "autostart": false,
+    "quiet": false
+  }
+}

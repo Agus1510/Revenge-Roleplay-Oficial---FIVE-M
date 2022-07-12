@@ -1,0 +1,1022 @@
+<html>
+    <head>
+        <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <img id="cursorPointer" src="assets/cursor.png">
+        <div class="skinCreator">
+
+            <!-- Tabs -->
+            <div class="tab">
+              <!-- <a href="#" class="identity disabled" data-link="identity">Identité</a> -->
+              <a href="#" class="visage active" data-link="visage">Apariencia</a>
+              <a href="#" class="pilosite" data-link="pilosite">Pelo</a>
+              <a href="#" class="vetements" data-link="vetements">Vestimenta</a>
+            </div>
+            
+            <form id="formSkinCreator">
+              <!-- BLOCK IDENTITY -->
+              <div class="block identity">
+                <div class="group">
+                    <h2>Aptitudes <a href="#">?</a></h2>
+                    <div class="input">
+                      <div class="label">Endurance <a href="#">?</a></div>
+                      <div class="label-value" data-legend="/??"></div>
+                      <div class="type-range">
+                        <a href="#" class="arrow arrow-left">&nbsp;</a>
+                        <input value="0" type="range" class="endurance" min="0" max="10">
+                        <a href="#" class="arrow arrow-right">&nbsp;</a>
+                      </div>
+                    </div>
+  
+                    <div class="input">
+                      <div class="label">Force <a href="#">?</a></div>
+                      <div class="label-value" data-legend="/??"></div>
+                      <div class="type-range">
+                        <a href="#" class="arrow arrow-left">&nbsp;</a>
+                        <input value="0" type="range" class="force" min="0" max="10">
+                        <a href="#" class="arrow arrow-right">&nbsp;</a>
+                      </div>
+                    </div>
+
+                    <div class="input">
+                      <div class="label">Tir <a href="#">?</a></div>
+                      <div class="label-value" data-legend="/??"></div>
+                      <div class="type-range">
+                        <a href="#" class="arrow arrow-left">&nbsp;</a>
+                        <input value="0" type="range" class="tir" min="0" max="10">
+                        <a href="#" class="arrow arrow-right">&nbsp;</a>
+                      </div>
+                    </div>
+
+                    <div class="input">
+                      <div class="label">Hygiène <a href="#">?</a></div>
+                      <div class="label-value" data-legend="/??"></div>
+                      <div class="type-range">
+                        <a href="#" class="arrow arrow-left">&nbsp;</a>
+                        <input value="0" type="range" class="hygiene" min="0" max="10">
+                        <a href="#" class="arrow arrow-right">&nbsp;</a>
+                      </div>
+                    </div>
+
+                    <div class="input">
+                      <div class="label">Mental <a href="#">?</a></div>
+                      <div class="label-value" data-legend="/??"></div>
+                      <div class="type-range">
+                        <a href="#" class="arrow arrow-left">&nbsp;</a>
+                        <input value="0" type="range" class="mental" min="0" max="10">
+                        <a href="#" class="arrow arrow-right">&nbsp;</a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <!-- BLOCK VISAGE -->
+              <div class="block visage active">
+                
+                <div class="group">
+                  <h2>Morfología</h2>
+				  <div class="input">
+                    <div class="label">Genero</div>
+                    <div class="label-value" data-legend="" style="display:none;"></div>
+                    <div class="type-range">
+                      <a href="#" class="arrow arrow-left">&nbsp;</a>
+                      <input value="0" type="range" class="gent" min="0" max="1">
+                      <a href="#" class="arrow arrow-right">&nbsp;</a>
+                    </div>
+                  </div>  
+                  <div class="input">
+                    <div class="label">Cara del padre</div>
+                    <div class="type-img">
+                      <label for="pere1">
+                        <input type="radio" name="pere" class="pere" value="0" id="pere1" checked>
+                        <div class="img"><img src="assets/heritage/Face-0.jpg" alt=""></div>
+                      </label>
+                      <label for="pere2">
+                        <input type="radio" name="pere" class="pere" value="1" id="pere2">
+                        <div class="img"><img src="assets/heritage/Face-1.jpg" alt=""></div>
+                      </label>
+                      <label for="pere3">
+                        <input type="radio" name="pere" class="pere" value="2" id="pere3">
+                        <div class="img"><img src="assets/heritage/Face-2.jpg" alt=""></div>
+                      </label>
+                      <label for="pere4">
+                        <input type="radio" name="pere" class="pere" value="3" id="pere4">
+                        <div class="img"><img src="assets/heritage/Face-3.jpg" alt=""></div>
+                      </label>
+                      <label for="pere5">
+                        <input type="radio" name="pere" class="pere" value="4" id="pere5">
+                        <div class="img"><img src="assets/heritage/Face-4.jpg" alt=""></div>
+                      </label>
+                      <label for="pere6">
+                        <input type="radio" name="pere" class="pere" value="5" id="pere6">
+                        <div class="img"><img src="assets/heritage/Face-5.jpg" alt=""></div>
+                      </label>
+                      <label for="pere7">
+                        <input type="radio" name="pere" class="pere" value="6" id="pere7">
+                        <div class="img"><img src="assets/heritage/Face-6.jpg" alt=""></div>
+                      </label>
+                      <label for="pere8">
+                        <input type="radio" name="pere" class="pere" value="7" id="pere8">
+                        <div class="img"><img src="assets/heritage/Face-7.jpg" alt=""></div>
+                      </label>
+                      <label for="pere9">
+                        <input type="radio" name="pere" class="pere" value="8" id="pere9">
+                        <div class="img"><img src="assets/heritage/Face-8.jpg" alt=""></div>
+                      </label>
+                      <label for="pere10">
+                        <input type="radio" name="pere" class="pere" value="9" id="pere10">
+                        <div class="img"><img src="assets/heritage/Face-9.jpg" alt=""></div>
+                      </label>
+                      <label for="pere11">
+                        <input type="radio" name="pere" class="pere" value="10" id="pere11">
+                        <div class="img"><img src="assets/heritage/Face-10.jpg" alt=""></div>
+                      </label>
+                      <label for="pere12">
+                        <input type="radio" name="pere" class="pere" value="11" id="pere12">
+                        <div class="img"><img src="assets/heritage/Face-11.jpg" alt=""></div>
+                      </label>
+                      <label for="pere13">
+                        <input type="radio" name="pere" class="pere" value="12" id="pere13">
+                        <div class="img"><img src="assets/heritage/Face-12.jpg" alt=""></div>
+                      </label>
+                      <label for="pere14">
+                        <input type="radio" name="pere" class="pere" value="13" id="pere14">
+                        <div class="img"><img src="assets/heritage/Face-13.jpg" alt=""></div>
+                      </label>
+                      <label for="pere15">
+                        <input type="radio" name="pere" class="pere" value="14" id="pere15">
+                        <div class="img"><img src="assets/heritage/Face-14.jpg" alt=""></div>
+                      </label>
+                      <label for="pere16">
+                        <input type="radio" name="pere" class="pere" value="15" id="pere16">
+                        <div class="img"><img src="assets/heritage/Face-15.jpg" alt=""></div>
+                      </label>
+                      <label for="pere17">
+                        <input type="radio" name="pere" class="pere" value="16" id="pere17">
+                        <div class="img"><img src="assets/heritage/Face-16.jpg" alt=""></div>
+                      </label>
+                      <label for="pere18">
+                        <input type="radio" name="pere" class="pere" value="17" id="pere18">
+                        <div class="img"><img src="assets/heritage/Face-17.jpg" alt=""></div>
+                      </label>
+                      <label for="pere19">
+                        <input type="radio" name="pere" class="pere" value="18" id="pere19">
+                        <div class="img"><img src="assets/heritage/Face-18.jpg" alt=""></div>
+                      </label>
+                      <label for="pere20">
+                        <input type="radio" name="pere" class="pere" value="19" id="pere20">
+                        <div class="img"><img src="assets/heritage/Face-19.jpg" alt=""></div>
+                      </label>
+                      <label for="pere21">
+                        <input type="radio" name="pere" class="pere" value="20" id="pere21">
+                        <div class="img"><img src="assets/heritage/Face-20.jpg" alt=""></div>
+                      </label>
+                      <label for="pere22">
+                        <input type="radio" name="pere" class="pere" value="42" id="pere22">
+                        <div class="img"><img src="assets/heritage/Face-42.jpg" alt=""></div>
+                      </label>
+                      <label for="pere23">
+                        <input type="radio" name="pere" class="pere" value="43" id="pere23">
+                        <div class="img"><img src="assets/heritage/Face-43.jpg" alt=""></div>
+                      </label>
+                      <label for="pere24">
+                        <input type="radio" name="pere" class="pere" value="44" id="pere24">
+                        <div class="img"><img src="assets/heritage/Face-44.jpg" alt=""></div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="input">
+                    <div class="label">Cara de la madre</div>
+                    <div class="type-img">
+                      <label for="mere1">
+                        <input type="radio" name="mere" class="mere" value="21" id="mere1" checked>
+                        <div class="img"><img src="assets/heritage/Face-21.jpg" alt=""></div>
+                      </label>
+                      <label for="mere2">
+                        <input type="radio" name="mere" class="mere" value="22" id="mere2">
+                        <div class="img"><img src="assets/heritage/Face-22.jpg" alt=""></div>
+                      </label>
+                      <label for="mere3">
+                        <input type="radio" name="mere" class="mere" value="23" id="mere3">
+                        <div class="img"><img src="assets/heritage/Face-23.jpg" alt=""></div>
+                      </label>
+                      <label for="mere4">
+                        <input type="radio" name="mere" class="mere" value="24" id="mere4">
+                        <div class="img"><img src="assets/heritage/Face-24.jpg" alt=""></div>
+                      </label>
+                      <label for="mere5">
+                        <input type="radio" name="mere" class="mere" value="25" id="mere5">
+                        <div class="img"><img src="assets/heritage/Face-25.jpg" alt=""></div>
+                      </label>
+                      <label for="mere6">
+                        <input type="radio" name="mere" class="mere" value="26" id="mere6">
+                        <div class="img"><img src="assets/heritage/Face-26.jpg" alt=""></div>
+                      </label>
+                      <label for="mere7">
+                        <input type="radio" name="mere" class="mere" value="27" id="mere7">
+                        <div class="img"><img src="assets/heritage/Face-27.jpg" alt=""></div>
+                      </label>
+                      <label for="mere8">
+                        <input type="radio" name="mere" class="mere" value="28" id="mere8">
+                        <div class="img"><img src="assets/heritage/Face-28.jpg" alt=""></div>
+                      </label>
+                      <label for="mere9">
+                        <input type="radio" name="mere" class="mere" value="29" id="mere9">
+                        <div class="img"><img src="assets/heritage/Face-29.jpg" alt=""></div>
+                      </label>
+                      <label for="mere10">
+                        <input type="radio" name="mere" class="mere" value="30" id="mere10">
+                        <div class="img"><img src="assets/heritage/Face-30.jpg" alt=""></div>
+                      </label>
+                      <label for="mere11">
+                        <input type="radio" name="mere" class="mere" value="31" id="mere11">
+                        <div class="img"><img src="assets/heritage/Face-31.jpg" alt=""></div>
+                      </label>
+                      <label for="mere12">
+                        <input type="radio" name="mere" class="mere" value="32" id="mere12">
+                        <div class="img"><img src="assets/heritage/Face-32.jpg" alt=""></div>
+                      </label>
+                      <label for="mere13">
+                        <input type="radio" name="mere" class="mere" value="33" id="mere13">
+                        <div class="img"><img src="assets/heritage/Face-33.jpg" alt=""></div>
+                      </label>
+                      <label for="mere14">
+                        <input type="radio" name="mere" class="mere" value="34" id="mere14">
+                        <div class="img"><img src="assets/heritage/Face-34.jpg" alt=""></div>
+                      </label>
+                      <label for="mere15">
+                        <input type="radio" name="mere" class="mere" value="35" id="mere15">
+                        <div class="img"><img src="assets/heritage/Face-35.jpg" alt=""></div>
+                      </label>
+                      <label for="mere16">
+                        <input type="radio" name="mere" class="mere" value="36" id="mere16">
+                        <div class="img"><img src="assets/heritage/Face-36.jpg" alt=""></div>
+                      </label>
+                      <label for="mere17">
+                        <input type="radio" name="mere" class="mere" value="37" id="mere17">
+                        <div class="img"><img src="assets/heritage/Face-37.jpg" alt=""></div>
+                      </label>
+                      <label for="mere18">
+                        <input type="radio" name="mere" class="mere" value="38" id="mere18">
+                        <div class="img"><img src="assets/heritage/Face-38.jpg" alt=""></div>
+                      </label>
+                      <label for="mere19">
+                        <input type="radio" name="mere" class="mere" value="39" id="mere19">
+                        <div class="img"><img src="assets/heritage/Face-39.jpg" alt=""></div>
+                      </label>
+                      <label for="mere20">
+                        <input type="radio" name="mere" class="mere" value="40" id="mere20">
+                        <div class="img"><img src="assets/heritage/Face-40.jpg" alt=""></div>
+                      </label>
+                      <label for="mere21">
+                        <input type="radio" name="mere" class="mere" value="41" id="mere21">
+                        <div class="img"><img src="assets/heritage/Face-41.jpg" alt=""></div>
+                      </label>
+                      <label for="mere22">
+                        <input type="radio" name="mere" class="mere" value="45" id="mere22">
+                        <div class="img"><img src="assets/heritage/Face-45.jpg" alt=""></div>
+                      </label>
+                    </div>
+                  </div>
+
+
+                  <div class="input">
+                    <div class="label">Genética padre / madre</div>
+                    <div class="label-value" data-legend="" style="display:none;"></div>
+                    <div class="type-range">
+                      <a href="#" class="arrow arrow-left">&nbsp;</a>
+                      <input value="5" type="range" class="morphologie" min="0" max="10">
+                      <a href="#" class="arrow arrow-right">&nbsp;</a>
+                    </div>
+                  </div>  
+                  
+                  <div class="input">
+                    <div class="label">Color de ojos</div>
+                    <div class="type-radio">
+                      <label for="eye1">
+                        <input type="radio" name="eyecolor" class="eyecolor" value="0" id="eye1" checked>
+                        <span class="color" data-color="#525e37"></span>
+                      </label>
+                      <label for="eye2">
+                        <input type="radio" name="eyecolor" class="eyecolor" value="1" id="eye2">
+                        <span class="color" data-color="#263419"></span>
+                      </label>
+                      <label for="eye3">
+                        <input type="radio" name="eyecolor" class="eyecolor" value="2" id="eye3">
+                        <span class="color" data-color="#83b7d5"></span>
+                      </label>
+                      <label for="eye4">
+                        <input type="radio" name="eyecolor" class="eyecolor" value="3" id="eye4">
+                        <span class="color" data-color="#3e66a3"></span>
+                      </label>
+                      <label for="eye5">
+                        <input type="radio" name="eyecolor" class="eyecolor" value="4" id="eye5">
+                        <span class="color" data-color="#8d6833"></span>
+                      </label>
+                      <label for="eye6">
+                        <input type="radio" name="eyecolor" class="eyecolor" value="5" id="eye6">
+                        <span class="color" data-color="#523711"></span>
+                      </label>
+                      <label for="eye7">
+                        <input type="radio" name="eyecolor" class="eyecolor" value="6" id="eye7">
+                        <span class="color" data-color="#d08418"></span>
+                      </label>
+                      <label for="eye9">
+                        <input type="radio" name="eyecolor" class="eyecolor" value="8" id="eye9">
+                        <span class="color" data-color="#bebebe"></span>
+                      </label>
+                      <label for="eye13">
+                        <input type="radio" name="eyecolor" class="eyecolor" value="12" id="eye13">
+                        <span class="color" data-color="#0d0d0c"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="group">
+                  <h2>Piel</h2>
+                  <div class="input">
+                    <div class="label">Color de piel</div>
+                    <div class="type-radio">
+                      <label for="p1">
+                        <input type="radio" name="peaucolor" class="peaucolor" value="12" id="p1" checked>
+                        <span class="color" data-color="#ecc8ae"></span>
+                      </label>
+                      <label for="p2">
+                        <input type="radio" name="peaucolor" class="peaucolor" value="25" id="p2">
+                        <span class="color" data-color="#ce9874"></span>
+                      </label>
+                      <label for="p3">
+                        <input type="radio" name="peaucolor" class="peaucolor" value="19" id="p3">
+                        <span class="color" data-color="#925a41"></span>
+                      </label>
+                      <label for="p4">
+                        <input type="radio" name="peaucolor" class="peaucolor" value="14" id="p4">
+                        <span class="color" data-color="#4e3a26"></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="input">
+                    <div class="label">Acné</div>
+                    <div class="label-value" data-legend="/23"></div>
+                    <div class="type-range">
+                      <a href="#" class="arrow arrow-left">&nbsp;</a>
+                      <input value="0" type="range" class="acne" min="0" max="23">
+                      <a href="#" class="arrow arrow-right">&nbsp;</a>
+                    </div>
+                  </div>
+
+                  <div class="input">
+                    <div class="label">Problemas de piel</div>
+                    <div class="label-value" data-legend="/11"></div>
+                    <div class="type-range">
+                      <a href="#" class="arrow arrow-left">&nbsp;</a>
+                      <input value="0" type="range" class="pbpeau" min="0" max="11">
+                      <a href="#" class="arrow arrow-right">&nbsp;</a>
+                    </div>
+                  </div>
+
+                  <div class="input">
+                    <div class="label">Pecas</div>
+                    <div class="label-value" data-legend="/17"></div>
+                    <div class="type-range">
+                      <a href="#" class="arrow arrow-left">&nbsp;</a>
+                      <input value="0" type="range" class="tachesrousseur" min="0" max="17">
+                      <a href="#" class="arrow arrow-right">&nbsp;</a>
+                    </div>
+                  </div>
+
+                  <div class="input">
+                    <div class="label">Arrugas</div>
+                    <div class="label-value" data-legend="/14"></div>
+                    <div class="type-range">
+                      <a href="#" class="arrow arrow-left">&nbsp;</a>
+                      <input value="0" type="range" class="rides" min="0" max="14">
+                      <a href="#" class="arrow arrow-right">&nbsp;</a>
+                    </div>
+                  </div>
+
+                  <div class="input">
+                    <div class="label">Intensidad de las arrugas</div>
+                    <div class="label-value" data-legend="/10"></div>
+                    <div class="type-range">
+                      <a href="#" class="arrow arrow-left">&nbsp;</a>
+                      <input value="10" type="range" class="intensiterides" min="0" max="10">
+                      <a href="#" class="arrow arrow-right">&nbsp;</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- BLOCK PILOSITE -->
+              <div class="block pilosite">
+                <div class="group">
+                  <h2>Pelo</h2>
+                  <div class="input">
+                    <div class="label">Peinado</div>
+                    <div class="label-value" data-legend="/74"></div>
+                    <div class="type-range">
+                      <a href="#" class="arrow arrow-left">&nbsp;</a>
+                      <input value="0" type="range" class="hair" min="0" max="174">
+                      <a href="#" class="arrow arrow-right">&nbsp;</a>
+                    </div>
+                  </div>
+
+                  <div class="input">
+                    <div class="label">Color de pelo</div>
+                    <div class="type-radio">
+                      <label for="c1">
+                        <input type="radio" name="haircolor" class="haircolor" value="0" id="c1" checked>
+                        <span class="color" data-color="#1D1D1A"></span>
+                      </label>
+                      <label for="c2">
+                        <input type="radio" name="haircolor" class="haircolor" value="2" id="c2">
+                        <span class="color" data-color="#4B392D"></span>
+                      </label>
+                      <label for="c3">
+                        <input type="radio" name="haircolor" class="haircolor" value="4" id="c3">
+                        <span class="color" data-color="#7A3B1F"></span>
+                      </label>
+                      <label for="c4">
+                        <input type="radio" name="haircolor" class="haircolor" value="6" id="c4">
+                        <span class="color" data-color="#A35631"></span>
+                      </label>
+                      <label for="c5">
+                        <input type="radio" name="haircolor" class="haircolor" value="8" id="c5">
+                        <span class="color" data-color="#A96F49"></span>
+                      </label>
+                      <label for="c6">
+                        <input type="radio" name="haircolor" class="haircolor" value="10" id="c6">
+                        <span class="color" data-color="#BD8D5E"></span>
+                      </label>
+                      <label for="c7">
+                        <input type="radio" name="haircolor" class="haircolor" value="12" id="c7">
+                        <span class="color" data-color="#CBA66F"></span>
+                      </label>
+                      <label for="c8">
+                        <input type="radio" name="haircolor" class="haircolor" value="14" id="c8">
+                        <span class="color" data-color="#E8BE78"></span>
+                      </label>
+                      <label for="c9">
+                        <input type="radio" name="haircolor" class="haircolor" value="16" id="c9">
+                        <span class="color" data-color="#D09E6A"></span>
+                      </label>
+                      <label for="c10">
+                        <input type="radio" name="haircolor" class="haircolor" value="18" id="c10">
+                        <span class="color" data-color="#993524"></span>
+                      </label>
+                      <label for="c11">
+                        <input type="radio" name="haircolor" class="haircolor" value="20" id="c11">
+                        <span class="color" data-color="#9C1611"></span>
+                      </label>
+                      <label for="c12">
+                        <input type="radio" name="haircolor" class="haircolor" value="22" id="c12">
+                        <span class="color" data-color="#D1381E"></span>
+                      </label>
+                      <label for="c13">
+                        <input type="radio" name="haircolor" class="haircolor" value="24" id="c13">
+                        <span class="color" data-color="#C85831"></span>
+                      </label>
+                      <label for="c14">
+                        <input type="radio" name="haircolor" class="haircolor" value="26" id="c14">
+                        <span class="color" data-color="#947A67"></span>
+                      </label>
+                      <label for="c15">
+                        <input type="radio" name="haircolor" class="haircolor" value="28" id="c15">
+                        <span class="color" data-color="#D8C1AC"></span>
+                      </label>
+                      <label for="c16">
+                        <input type="radio" name="haircolor" class="haircolor" value="30" id="c16">
+                        <span class="color" data-color="#734F61"></span>
+                      </label>
+                      <label for="c17">
+                        <input type="radio" name="haircolor" class="haircolor" value="32" id="c17">
+                        <span class="color" data-color="#AD476A"></span>
+                      </label>
+                      <label for="c18">
+                        <input type="radio" name="haircolor" class="haircolor" value="35" id="c18">
+                        <span class="color" data-color="#FFAEBC"></span>
+                      </label>
+                      <label for="c19">
+                        <input type="radio" name="haircolor" class="haircolor" value="36" id="c19">
+                        <span class="color" data-color="#089A8D"></span>
+                      </label>
+                      <label for="c20">
+                        <input type="radio" name="haircolor" class="haircolor" value="40" id="c20">
+                        <span class="color" data-color="#309060"></span>
+                      </label>
+                      <label for="c21">
+                        <input type="radio" name="haircolor" class="haircolor" value="43" id="c21">
+                        <span class="color" data-color="#A3C015"></span>
+                      </label>
+                      <label for="c22">
+                        <input type="radio" name="haircolor" class="haircolor" value="45" id="c22">
+                        <span class="color" data-color="#EEC85C"></span>
+                      </label>
+                      <label for="c23">
+                        <input type="radio" name="haircolor" class="haircolor" value="48" id="c23">
+                        <span class="color" data-color="#FE8B10"></span>
+                      </label>
+                      <label for="c24">
+                        <input type="radio" name="haircolor" class="haircolor" value="53" id="c24">
+                        <span class="color" data-color="#D40B0E"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="group">
+                  <h2>Cejas</h2>
+                  <div class="input">
+                    <div class="label">Forma de cejas</div>
+                    <div class="label-value" data-legend="/34"></div>
+                    <div class="type-range">
+                      <a href="#" class="arrow arrow-left">&nbsp;</a>
+                      <input value="0" type="range" class="sourcils" min="0" max="34">
+                      <a href="#" class="arrow arrow-right">&nbsp;</a>
+                    </div>
+                  </div>
+
+                  <div class="input">
+                    <div class="label">Espesor de cejas</div>
+                    <div class="label-value" data-legend="/10"></div>
+                    <div class="type-range">
+                      <a href="#" class="arrow arrow-left">&nbsp;</a>
+                      <input value="10" type="range" class="epaisseursourcils" min="0" max="10">
+                      <a href="#" class="arrow arrow-right">&nbsp;</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="group">
+                  <h2>Barba</h2>
+                  <div class="input">
+                    <div class="label">Tipo de barba</div>
+                    <div class="label-value" data-legend="/28"></div>
+                    <div class="type-range">
+                      <a href="#" class="arrow arrow-left">&nbsp;</a>
+                      <input value="0" type="range" class="barbe" min="0" max="28">
+                      <a href="#" class="arrow arrow-right">&nbsp;</a>
+                    </div>
+                  </div>
+
+                  <div class="input">
+                    <div class="label">Espesor de barba</div>
+                    <div class="label-value" data-legend="/10"></div>
+                    <div class="type-range">
+                      <a href="#" class="arrow arrow-left">&nbsp;</a>
+                      <input value="0" type="range" class="epaisseurbarbe" min="0" max="10">
+                      <a href="#" class="arrow arrow-right">&nbsp;</a>
+                    </div>
+                  </div>
+
+                  <div class="input">
+                    <div class="label">Color de barba</div>
+                    <div class="type-radio">
+                      <label for="bc1">
+                        <input type="radio" name="barbecolor" class="barbecolor" value="0" id="bc1" checked>
+                        <span class="color" data-color="#1D1D1A"></span>
+                      </label>
+                      <label for="bc2">
+                        <input type="radio" name="barbecolor" class="barbecolor" value="2" id="bc2">
+                        <span class="color" data-color="#4B392D"></span>
+                      </label>
+                      <label for="bc3">
+                        <input type="radio" name="barbecolor" class="barbecolor" value="4" id="bc3">
+                        <span class="color" data-color="#7A3B1F"></span>
+                      </label>
+                      <label for="bc4">
+                        <input type="radio" name="barbecolor" class="barbecolor" value="6" id="bc4">
+                        <span class="color" data-color="#A35631"></span>
+                      </label>
+                      <label for="bc5">
+                        <input type="radio" name="barbecolor" class="barbecolor" value="8" id="bc5">
+                        <span class="color" data-color="#A96F49"></span>
+                      </label>
+                      <label for="bc6">
+                        <input type="radio" name="barbecolor" class="barbecolor" value="10" id="bc6">
+                        <span class="color" data-color="#BD8D5E"></span>
+                      </label>
+                      <label for="bc7">
+                        <input type="radio" name="barbecolor" class="barbecolor" value="12" id="bc7">
+                        <span class="color" data-color="#CBA66F"></span>
+                      </label>
+                      <label for="bc8">
+                        <input type="radio" name="barbecolor" class="barbecolor" value="14" id="bc8">
+                        <span class="color" data-color="#E8BE78"></span>
+                      </label>
+                      <label for="bc9">
+                        <input type="radio" name="barbecolor" class="barbecolor" value="16" id="bc9">
+                        <span class="color" data-color="#D09E6A"></span>
+                      </label>
+                      <label for="bc13">
+                        <input type="radio" name="barbecolor" class="barbecolor" value="24" id="bc13">
+                        <span class="color" data-color="#C85831"></span>
+                      </label>
+                      <label for="bc14">
+                        <input type="radio" name="barbecolor" class="barbecolor" value="26" id="bc14">
+                        <span class="color" data-color="#947A67"></span>
+                      </label>
+                      <label for="bc15">
+                        <input type="radio" name="barbecolor" class="barbecolor" value="28" id="bc15">
+                        <span class="color" data-color="#D8C1AC"></span>
+                      </label>
+                    </div>
+                  </div>
+              </div>
+
+              </div>
+
+              <!-- BLOCK CLOTHES -->
+              <div class="block vetements">
+                <div class="group">
+                  <h2>Cabeza</h2>
+                  <div class="label-value" data-legend="">0</div>
+                  <ul class="chapeaux">
+                    <button type="button" class="arrow arrowvetement-left">&nbsp;</button>
+                    <li data="0" class="active">Ninguno</li>
+                    <li data="1">Gorro negro</li>
+                    <li data="2">Gorro blanco</li>
+                    <li data="3">Bob de pescador</li>
+                    <li data="4">Gorra negra LS</li>
+                    <li data="5">Gorra blanca LS</li>
+                    <li data="6">Sombrero reggae</li>
+                    <li data="7">Boina blanca</li>
+                    <li data="8">Boina gris</li>
+                    <li data="9">Boina negra</li>
+                    <li data="10">Boina marrón</li>
+                    <li data="11">Gorra f°</li>
+                    <li data="12">Gorra f° (hacia atras)</li>
+                    <li data="13">Gorra stank</li>
+                    <li data="14">Gorra Stank (hacia atras)</li>
+                    <li data="15">Sombrero gris</li>
+                    <li data="16">Sombrero blanco</li>
+                    <li data="17">Sombrero de vaquero</li>
+                    <li data="18">Bandana blanca</li>
+                    <li data="19">Bandana negra</li>
+                    <li data="20">Auriculares negros</li>
+                    <li data="21">Auriculares blancos</li>
+                    <li data="22">Bob tréi</li>
+                    <li data="23">Sombrero festivo</li>
+                    <li data="24">Sombrero de mafia</li>
+                    <li data="25">Bombin</li>
+                    <li data="26">Sombrero de copa</li>
+                    <li data="27">Sombrero de lana</li>
+                    <li data="28">Gorra de agente roja</li>
+                    <li data="29">Gorra negra broker</li>
+                    <li data="30">Gora de embaucador</li>
+                    <li data="31">Gorra vapid</li>
+                    <li data="32">Gorra castillo de arena</li>
+                    <button type="button" class="arrow arrowvetement-right">&nbsp;</button>
+                  </ul>
+                </div>
+                <div class="group">
+                  <h2>Anteojos</h2>
+                  <div class="label-value" data-legend="">0</div>
+                  <ul class="lunettes">
+                    <button type="button" class="arrow arrowvetement-left">&nbsp;</button>
+                    <li data="0" class="active">Ninguno</li>
+                    <li data="1">Grandes negros (de sol)</li>
+                    <li data="2">Grandes negros</li>
+                    <li data="3">Semi abiertos (de sol)</li>
+                    <li data="4">Semi abiertos negros</li>
+                    <li data="5">Aviador (de sol)</li>
+                    <li data="6">Aviador</li>
+                    <li data="7">Wayfarer (de sol)</li>
+                    <li data="8">Zoo (de sol)</li>
+                    <li data="9">Sport (de sol)</li>
+                    <li data="10">Montagne (de sol)</li>
+                    <li data="11">Intello</li>
+                    <li data="11">Sky (de sol)</li>
+                    <button type="button" class="arrow arrowvetement-right">&nbsp;</button>
+                  </ul>
+                </div>
+                <div class="group">
+                  <h2>Orejas</h2>
+                  <div class="label-value" data-legend="">0</div>
+                  <ul class="oreilles">
+                    <button type="button" class="arrow arrowvetement-left">&nbsp;</button>
+                    <li data="0" class="active">Ninguno</li>
+                    <li data="1">Bucle (izquierda)</li>
+                    <li data="2">Bucle (derecha)</li>
+                    <li data="3">Bucle</li>
+                    <li data="4">Diamante (derecha)</li>
+                    <li data="5">Diamante (izquierda)</li>
+                    <li data="6">Diamante</li>
+                    <li data="7">Cuadrado (izquierda)</li>
+                    <li data="8">Cuadrado (derecha)</li>
+                    <li data="9">Cuadrado</li>
+                    <li data="10">Picas (izquierda)</li>
+                    <li data="11">Picas (derecha)</li>
+                    <li data="12">Picas</li>
+                    <li data="13">Diamante real (izquierda)</li>
+                    <li data="14">Diamante real (Derecha)</li>
+                    <li data="15">Diamante real</li>
+                    <button type="button" class="arrow arrowvetement-right">&nbsp;</button>
+                  </ul>
+                </div>
+
+                <div class="group">
+                  <h2>Tops</h2>
+                  <div class="label-value" data-legend="">0</div>
+                  <ul class="hauts">
+                    <button type="button" class="arrow arrowvetement-left">&nbsp;</button>
+                    <li data="0" class="active">Ninguno</li>
+                    <li data="1">Remera basica beige</li>
+                    <li data="2">Remera basica rosa</li>
+                    <li data="3">Remera de basket simple</li>
+                    <li data="4">Deporiva dorada</li>
+                    <li data="5">Deportiva roja</li>
+                    <li data="6">Traje casual</li>
+                    <li data="7">Traje de 3 piezas negro</li>
+                    <li data="8">Traje de 3 piezas blanco</li>
+                    <li data="9">Musculosa blanca</li>
+                    <li data="10">Chaqueta de cuero marrón</li>
+                    <li data="11">Chaqueta de cuero negra</li>
+                    <li data="12">Chaqueta de cuero roja</li>
+                    <li data="13">Sudadera con capucha azul marino</li>
+                    <li data="14">Sudadera con capucha marrón </li>
+                    <li data="15">Sudadera con capucha borgoña</li>
+                    <li data="16">Sudadera con capucha marrón Trei</li>
+                    <li data="17">Polo a rayas</li>
+                    <li data="18">Traje de corbata blanco</li>
+                    <li data="19">Traje de corbata negro</li>
+                    <li data="20">Traje de corbata rojo</li>
+                    <li data="21">Dizfraz</li>
+                    <li data="22">Camisa a cuadros verde</li>
+                    <li data="23">Camisa con mangas enrolladas</li>
+                    <li data="24">Camisa azul con sueter</li>
+                    <li data="25">Camisa amarilla con sueter</li>
+                    <li data="26">Remera en v taupe</li>
+                    <li data="27">Remera en v azul</li>
+                    <li data="28">Remera en v rosa</li>
+                    <li data="29">Musculosa azul</li>
+                    <li data="30">Musculosa amarilla</li>
+                    <li data="31">Musculosa degrade</li>
+                    <li data="32">Camisa azul marino manga corta</li>
+                    <li data="33">Camisa rosa manga corta</li>
+                    <li data="34">Camisa a cuadros manga corta</li>
+                    <li data="35">Traje casual con camisa</li>
+                    <li data="36">Musculosa con rayas amarillas/verdes</li>
+                    <li data="37">Musculosa camuflada</li>
+                    <li data="38">Chaqueta marrón</li>
+                    <li data="39">Chaqueta negra/amarilla</li>
+                    <li data="40">Chaqueta negra/roja</li>
+                    <li data="41">Remera manga larga gris/negro</li>
+                    <li data="42">Remera manga larga amarilla/negro</li>
+                    <li data="43">Polo Stark rojo</li>
+                    <li data="44">Polo Stark azul</li>
+                    <li data="45">Camisa a cuadros nroja</li>
+                    <li data="46">Camisa con tirantes</li>
+                    <li data="47">Sueter negro</li>
+                    <li data="48">Sueter blanco</li>
+                    <li data="49">Sueter kaki</li>
+                    <li data="50">Sudadera con capucha</li>
+                    <li data="51">Chaqueta acolchada marrón con pelos oscuros</li>
+                    <li data="52">Chaqueta marròn con pelos claros</li>
+                    <li data="53">Chqueta marrón con pelos</li>
+                    <li data="54">Parka larga y traje de 3 piezas</li>
+                    <li data="55">Chamarra Louis Vuitton</li>
+                    <li data="56">Parka con corbata</li>
+                    <li data="57">Bombardero lobos rojo</li>
+                    <li data="58">Remera XXL blanca</li>
+                    <li data="59">Remera XXL negra</li>
+                    <li data="60">Polo Ralph Lauren rosa</li>
+                    <li data="61">Polo Ralph Lauren beige</li>
+                    <li data="62">Polo Ralph Lauren azul marino</li>
+                    <li data="63">Sudadera con capucha negro</li>
+                    <li data="64">Sudadera con capucha blanco</li>
+                    <li data="65">Sudadera con capucha rojo</li>
+                    <li data="66">Bomber Los Santos</li>
+                    <li data="67">Bomber Double P</li>
+                    <li data="68">Bomber Magnetics</li>
+                    <li data="69">Bomber Hinterland</li>
+                    <li data="70">Bomber Broker</li>
+                    <li data="71">Bomber Trickster</li>
+                    <li data="72">Sueter basic noir</li>
+                    <li data="73">Camisa de jean</li>
+                    <li data="74">Traje azul arqueado</li>
+                    <li data="75">Traje rosa ajustado</li>
+                    <li data="76">Traje rojo</li>
+                    <li data="77">Camisa floreada</li>
+                    <li data="78">Chaqueta de lana</li>
+                    <li data="79">Camisa de punto sin mangas</li>
+                    <li data="80">Jersey de cuello alto gris</li>
+                    <li data="81">Jersey de cuello alto negro</li>
+                    <li data="82">Chaquetade entrenamiento Asics</li>
+                    <li data="83">Camisa a cuadroas azul</li>
+                    <li data="84">Camisa a cuadros verde</li>
+                    <li data="85">Camisa a cuadros roja</li>
+                    <li data="86">Camisa a cuadros gris/blanca</li>
+                    <li data="87">Polo Liberty</li>
+                    <li data="88">Sudadera con capucha Liberty negra</li>
+                    <li data="89">Sudadera con capucha Liberty roja</li>
+                    <li data="90">Bomber verde</li>
+                    <li data="91">Bomber violeta</li>
+                    <li data="92">Bomber roja</li>
+                    <li data="93">Bomber azul</li>
+                    <li data="94">Bomber gris</li>
+                    <li data="95">Bomber blanca</li>
+                    <li data="96">Bomber negra</li>
+                    <li data="97">Remera blanca</li>
+                    <li data="98">Chaqueta de cuero</li>
+                    <li data="99">Chaqueta acolchada roja</li>
+                    <li data="100">Chaqueta acolchada verde</li>
+                    <li data="101">Chaqueta acolchada marrón</li>
+                    <li data="102">Chaqueta amarila mostaza</li>
+                    <li data="103">Chaqueta de jean</li>
+                    <li data="104">Chaqueta de jean bordada</li>
+                    <li data="105">Chaqueta de jean bordada sin mangas</li>
+                    <li data="106">Parka gris</li>
+                    <li data="107">Sudadera con capucha sin mangas</li>
+                    <li data="108">Sudadera con capucha Bigness</li>
+                    <li data="109">Sudadera con capucha Güffy</li>
+                    <li data="110">Sudadera con capucha Manor</li>
+                    <li data="111">Sudadera con capucha sans manche</li>
+                    <li data="112">Remera con bolsillo</li>
+                    <li data="113">Chaqueta joker</li>
+                    <li data="114">Chaqueta Güffy</li>
+                    <li data="115">Chaqueta Santo Capra</li>
+                    <li data="116">Sueter Perseus</li>
+                    <li data="117">Chaqueta de pluma gris</li>
+                    <li data="118">Maillot Wigwam</li>
+                    <button type="button" class="arrow arrowvetement-right">&nbsp;</button>
+                  </ul>
+                </div>
+
+                <div class="group">
+                  <h2>Piernas</h2>
+                  <div class="label-value" data-legend="">0</div>
+                  <ul class="pantalons">
+                    <button type="button" class="arrow arrowvetement-left">&nbsp;</button>
+                    <li data="0" class="active">Ninguno</li>
+                    <li data="1">Jeans regular</li>
+                    <li data="2">Jeans regular desgastado</li>
+                    <li data="3">Jeans regular recto</li>
+                    <li data="4">Short deportivo</li>
+                    <li data="5">Jogging blanco</li>
+                    <li data="6">Jeans chupin negro</li>
+                    <li data="7">Jeans chupin azul</li>
+                    <li data="8">Jeans chupin desgastado azul</li>
+                    <li data="9">Jogging blanco holgado</li>
+                    <li data="10">Jogging negro holgado</li>
+                    <li data="11">Pantalon negro holgado</li>
+                    <li data="12">Pantalon marron holgado</li>
+                    <li data="13">Pantalon kaki</li>
+                    <li data="14">Pantalon cargo beige</li>
+                    <li data="15">Pantalon de traje recto negro</li>
+                    <li data="16">Pantalon de traje recto azul</li>
+                    <li data="17">Short negro</li>
+                    <li data="18">Short gris</li>
+                    <li data="19">Short beige</li>
+                    <li data="20">Short deportivo gris</li>
+                    <li data="21">Short deportivo negro</li>
+                    <li data="22">Short deportivo bordo</li>
+                    <li data="23">Short holgado</li>
+                    <li data="24">Pantalon blanco</li>
+                    <li data="25">Pantalon Chupin negro</li>
+                    <li data="26">Pantalon Chupin gris</li>
+                    <li data="27">Pantalon Chupin Blanco</li>
+                    <li data="28">Jean Chupin Negro</li>
+                    <li data="29">Jean Chupin Azul claro</li>
+                    <li data="30">Jean Chupin Rojo</li>
+                    <li data="31">Jean Chupin Azul</li>
+                    <li data="32">Pantalon Chupin Negro</li>
+                    <li data="33">Pantalon Chupin gris</li>
+                    <li data="34">Pantalon Chupin gris claro</li>
+                    <li data="35">Pantalon Chupin beige</li>
+                    <li data="36">Jogging negro</li>
+                    <li data="37">Jogging gris corto</li>
+                    <li data="38">Pantalon largo claro</li>
+                    <li data="39">Pantalon largo oscuro</li>
+                    <li data="40">Pantalon corto claro</li>
+                    <li data="41">Pantalon corto oscuro</li>
+                    <li data="42">Short de baño Le Chein</li>
+                    <li data="43">Jogging largo Adidas</li>
+                    <li data="44">Pantalon a cuadros</li>
+                    <li data="45">Pantalon a cuadros</li>
+                    <li data="46">Pantalon de cuero</li>
+                    <li data="47">Jeans estampados</li>
+                    <li data="48">Jeans con agujeros</li>
+                    <li data="49">Jogging chupin marrón</li>
+                    <li data="50">Jogging chupin negro</li>
+                    <li data="51">Jogging chupin blanco</li>
+                    <li data="52">Jeans chupin azul marino</li>
+                    <li data="53">Jeans chupin azul</li>
+                    <li data="54">Jeans chupin gris</li>
+                    <li data="55">Pantalon camo</li>
+                    <li data="56">Short camo</li>
+                    <li data="57">Pantalon Banks camo</li>
+                    <button type="button" class="arrow arrowvetement-right">&nbsp;</button>
+                  </ul>
+                </div>
+
+                <div class="group">
+                  <h2>Pies</h2>
+                  <div class="label-value" data-legend="">0</div>
+                  <ul class="chaussures">
+                    <button type="button" class="arrow arrowvetement-left">&nbsp;</button>
+                    <li data="0" clase="activo">Ninguno</li>
+                    <li data="1">Baskets EE</li>
+                    <li data="2">Baskets Etny negro</li>
+                    <li data="3">Baskets Etny blanco</li>
+                    <li data="4">Baskets Etny rojo</li>
+                    <li data="5">Calzado marinero grises</li>
+                    <li data="6">Calzado marinero negro</li>
+                    <li data="7">Calzado marinero azul</li>
+                    <li data="8">Converse negras</li>
+                    <li data="9">Converse rosas</li>
+                    <li data="10">Converse mostaza</li>
+                    <li data="11">Converse grises</li>
+                    <li data="12">Chanclas blancas</li>
+                    <li data="13">Chancletas con medias</li>
+                    <li data="14">Baskets blancas</li>
+                    <li data="15">Baskets rojas</li>
+                    <li data="16">Baskets tréi</li>
+                    <li data="17">Baskets rojas</li>
+                    <li data="18">Baskets amarillo/verdes</li>
+                    <li data="19">Baskets azules/rojas</li>
+                    <li data="20">Zapatos de vestir negros</li>
+                    <li data="21">Timberland Clasicos</li>
+                    <li data="22">Timberland azules</li>
+                    <li data="23">Timberland rojas</li>
+                    <li data="24">Zapatos de vestir negros</li>
+                    <li data="25">Zapatos de vestir marrones</li>
+                    <li data="26">Chanclas negras</li>
+                    <li data="27">Zapatos de vestir marrones</li>
+                    <li data="28">Botas negras</li>
+                    <li data="29">Botas desgastadas</li>
+                    <li data="30">Botas con fashion blancas</li>
+                    <li data="31">Botas con fashion negras</li>
+                    <li data="32">Botas con fashion rojas</li>
+                    <li data="33">Botas con fashion todo rojas</li>
+                    <li data="34">Zapatillas blancas</li>
+                    <li data="35">Zapatillas guepardo</li>
+                    <li data="36">Zapatos marrones</li>
+                    <li data="37">Zapatos negros</li>
+                    <li data="38">Baskets blanco sin encaje</li>
+                    <li data="39">Baskets negro sin encaje</li>
+                    <li data="40">Baskets sin cordones</li>
+                    <li data="41">Baskets beiges</li>
+                    <li data="42">Baskets negras</li>
+                    <li data="43">Baskets rojas</li>
+                    <li data="44">Baskets blancas</li>
+                    <li data="45">Baskets negras</li>
+                    <li data="46">Baskets rosas</li>
+                    <li data="47">Baskets alto blanco/rosa</li>
+                    <li data="48">Baskets alto verde</li>
+                    <li data="49">Baskets alto naranja</li>
+                    <li data="50">Baskets fluo blancos</li>
+                    <button type="button" class="arrow arrowvetement-right">&nbsp;</button>
+                  </ul>
+                </div>
+
+                <div class="group">
+                  <h2>Anteojos</h2>
+                  <div class="label-value" data-legend="">0</div>
+                  <ul class="montre">
+                    <button type="button" class="arrow arrowvetement-left">&nbsp;</button>
+                    <li data="0" class="active">Ninguno</li>
+                    <li data="1">Clásico</li>
+                    <li data="2">Conectado</li>
+                    <li data="3">Deportivo (negro)</li>
+                    <li data="4">Deportivo (blanco)</li>
+                    <li data="5">Bañado en oro</li>
+                    <li data="6">Oro</li>
+                    <li data="7">Metalico</li>
+                    <button type="button" class="arrow arrowvetement-right">&nbsp;</button>
+                  </ul>
+                </div>
+
+              </div>
+
+              <!-- Submit -->
+              <button class="submit">Terminar</button>
+
+          </form>
+        </div>
+
+        <div class="rotation">
+          <div class="button">A</div>
+          <div class="button">E</div>
+          <p>Girar el personaje</p>
+        </div>
+
+        <div class="popup confirmation">
+          <p>Estas seguro que desea validar la apariencia ?</p>
+          <div class="buttons">
+            <div class="button yes">Si</div>
+            <div class="button no">No</div>
+          </div>
+        </div>
+
+        <!-- JS Scripts -->
+        <script src="front.js" type="text/javascript"></script>
+        <script src="script.js" type="text/javascript"></script>
+    </body>
+</html>
